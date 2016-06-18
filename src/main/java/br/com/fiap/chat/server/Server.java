@@ -35,7 +35,7 @@ public class Server implements Runnable {
 	
 	public Server(ScreenServer server) {
 		try {
-			FileInputStream inputStream = new FileInputStream("chat.properties");		
+			FileInputStream inputStream = new FileInputStream(this.getClass().getResource("/chat.properties").getFile());		
 			Properties props = new Properties();
 			
 			props.load(inputStream);

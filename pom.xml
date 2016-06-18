@@ -11,6 +11,60 @@
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.7.21</version>
 		</dependency>
-
+		<!-- https://mvnrepository.com/artifact/tablelayout/TableLayout -->
+		<dependency>
+			<groupId>tablelayout</groupId>
+			<artifactId>tablelayout</artifactId>
+			<version>0</version>
+		</dependency>
 	</dependencies>
+	<profiles>
+
+		<profile>
+			<id>client</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<version>1.5.0</version>
+						<executions>
+							<execution>
+								<goals>
+									<goal>java</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<mainClass>br.com.fiap.chat.client.ScreenClient</mainClass>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		
+		<profile>
+			<id>server</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<version>1.5.0</version>
+						<executions>
+							<execution>
+								<goals>
+									<goal>java</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<mainClass>br.com.fiap.chat.server.ScreenServer</mainClass>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+	</profiles>
 </project>

@@ -28,7 +28,7 @@ public class Client {
 	
 	public Client(ScreenClient client) {
 		try {
-			FileInputStream inputStream = new FileInputStream("chat.properties");		
+			FileInputStream inputStream = new FileInputStream(this.getClass().getResource("/chat.properties").getFile());		
 			Properties props = new Properties();
 			
 			props.load(inputStream);

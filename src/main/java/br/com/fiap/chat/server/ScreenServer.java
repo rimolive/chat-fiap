@@ -71,7 +71,7 @@ public class ScreenServer extends JFrame {
 	}
 	
 	/**
-	 * Inicializa todas as varíaves da tela
+	 * Inicializa todas as varï¿½aves da tela
 	 */
 	private void inicializacao() {
 		painelGeral = new JPanel(new TableLayout(size));
@@ -85,7 +85,7 @@ public class ScreenServer extends JFrame {
 		lblTitulo.setForeground(new Color(25,25,112));
 		lblTitulo.setFont(new Font("Arial", Font.BOLD, 14));
 		
-		lblInformacao = new JLabel("Para iniciar o chat clique no botão Iniciar!");
+		lblInformacao = new JLabel("Para iniciar o chat clique no botao Iniciar!");
 		lblInformacao.setForeground(new Color(25,25,112));
 		
 		btnConectar = new JButton("Iniciar");
@@ -129,7 +129,7 @@ public class ScreenServer extends JFrame {
 	}
 	
 	/**
-	 * Adiciona os listeners a cada botão. 
+	 * Adiciona os listeners a cada botao. 
 	 */
 	private void adicionaListeners() {		
 		btnConectar.addActionListener(action);
@@ -165,7 +165,7 @@ public class ScreenServer extends JFrame {
 			} else if(event.getSource().equals(btnAbrirLog)) {
 				jtaLog.append("Abrindo arquivo de log! \n");
 				try {
-					FileReader fileReader = new FileReader("C:\\LOG_CHAT.log");
+					FileReader fileReader = new FileReader("/var/log/chat-fiap.log");
 					BufferedReader arquivoLido = new BufferedReader(fileReader);
 					
 					int numLinha = 1;
